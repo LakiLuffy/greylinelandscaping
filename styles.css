@@ -99,18 +99,18 @@ textarea {
 .brand {
   display: inline-flex;
   align-items: center;
-  width: clamp(170px, 18vw, 230px);
-  min-width: 170px;
+  width: clamp(58px, 6vw, 76px);
+  min-width: 58px;
 }
 
 .brand-logo {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 66px;
+  max-height: 76px;
   object-fit: contain;
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.96);
+  border-radius: 0;
+  background: transparent;
 }
 
 .brand-logo-icon {
@@ -889,16 +889,16 @@ textarea {
   display: inline-flex;
   align-items: center;
   margin-bottom: 14px;
-  width: min(260px, 100%);
+  width: 112px;
 }
 
 .footer-brand img {
   width: 100%;
   height: auto;
-  max-height: 82px;
-  border-radius: 3px;
+  max-height: 112px;
+  border-radius: 0;
   object-fit: contain;
-  background: var(--color-white);
+  background: transparent;
 }
 
 .site-footer h2 {
@@ -952,7 +952,7 @@ textarea {
   }
 
   .brand {
-    width: 158px;
+    width: 58px;
     min-width: 0;
   }
 
@@ -1007,7 +1007,7 @@ textarea {
   }
 
   .brand img {
-    max-height: 54px;
+    max-height: 58px;
   }
 
   .hero-actions,
@@ -1047,14 +1047,6 @@ textarea {
 @media (max-width: 420px) {
   .brand {
     width: 52px;
-  }
-
-  .brand-logo-full {
-    display: none;
-  }
-
-  .brand-logo-icon {
-    display: block;
   }
 }
 
