@@ -238,14 +238,6 @@ h1 {
   text-shadow: 0 16px 40px rgba(0, 0, 0, 0.42);
 }
 
-.hero h1 {
-  -webkit-text-stroke: 1.5px rgba(8, 28, 16, 0.76);
-  text-shadow:
-    0 2px 0 rgba(8, 28, 16, 0.76),
-    0 8px 24px rgba(0, 0, 0, 0.62),
-    0 18px 46px rgba(0, 0, 0, 0.5);
-}
-
 .hero-subtitle {
   margin-bottom: 12px;
   font-size: clamp(1.18rem, 2.3vw, 1.65rem);
