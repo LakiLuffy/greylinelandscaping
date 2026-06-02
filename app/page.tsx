@@ -140,6 +140,21 @@ export const metadata: Metadata = {
     url: "https://greylinelandscaping.com",
     type: "website",
     locale: "en_AU",
+    images: [
+      {
+        url: "/images/hero-gardening-worker.png",
+        width: 1672,
+        height: 941,
+        alt: "Greyline Landscaping Melbourne gardener planting in a residential backyard",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Greyline Landscaping Melbourne | Mornington Peninsula & Bayside Landscapers",
+    description:
+      "Garden makeovers, turf installation, retaining walls, paving, decking, drainage and garden design across Mornington Peninsula and Bayside.",
+    images: ["/images/hero-gardening-worker.png"],
   },
 };
 
@@ -147,15 +162,10 @@ export default function HomePage() {
   return (
     <main>
       <section className="relative min-h-[78vh] overflow-hidden bg-[#1f1f1f] text-white md:min-h-screen" id="home">
-        <video
+        <img
           className="absolute inset-0 h-full w-full object-cover"
-          src="/images/hero-landscaping.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/images/After-10.jpg"
-          aria-hidden="true"
+          src="/images/hero-gardening-worker.png"
+          alt="Professional landscaper planting shrubs in a residential backyard"
         />
         <div className="absolute inset-0 bg-black/40" />
         <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5">
