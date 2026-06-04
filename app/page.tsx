@@ -127,16 +127,16 @@ const faqs: FAQ[] = [
 ];
 
 export const metadata: Metadata = {
-  title: "Greyline Landscaping Brighton | Bayside Landscapers",
+  title: "Brighton Landscaping | Greyline Landscaping Brighton",
   description:
-    "Greyline Landscaping Brighton provides garden makeovers, turf installation, retaining walls, paving, decking, drainage and garden design across Brighton and Bayside. Call for a free quote.",
+    "Brighton landscaping by Greyline Landscaping Brighton. Garden design, turf installation, retaining walls, paving, decking, drainage and backyard makeovers across Brighton and Bayside.",
   alternates: {
     canonical: "https://greylinelandscaping.com",
   },
   openGraph: {
-    title: "Greyline Landscaping Brighton | Bayside Landscapers",
+    title: "Brighton Landscaping | Greyline Landscaping Brighton",
     description:
-      "Garden makeovers, turf installation, retaining walls, paving, decking, drainage and garden design across Brighton and Bayside.",
+      "Brighton landscaping by Greyline Landscaping Brighton. Garden design, turf installation, retaining walls, paving, decking, drainage and backyard makeovers across Brighton and Bayside.",
     url: "https://greylinelandscaping.com",
     type: "website",
     locale: "en_AU",
@@ -151,9 +151,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Greyline Landscaping Brighton | Bayside Landscapers",
+    title: "Brighton Landscaping | Greyline Landscaping Brighton",
     description:
-      "Garden makeovers, turf installation, retaining walls, paving, decking, drainage and garden design across Brighton and Bayside.",
+      "Brighton landscaping by Greyline Landscaping Brighton. Garden design, turf installation, retaining walls, paving, decking, drainage and backyard makeovers across Brighton and Bayside.",
     images: ["/images/hero-gardening-worker.png"],
   },
 };

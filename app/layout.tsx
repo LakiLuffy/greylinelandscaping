@@ -7,10 +7,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://greylinelandscaping.com"),
   title: {
-    default: "Greyline Landscaping Brighton | Bayside Landscapers",
+    default: "Brighton Landscaping | Greyline Landscaping Brighton",
     template: "%s | Greyline Landscaping Brighton",
   },
-  description: "Professional landscaping services across Brighton, Bayside and surrounding suburbs. Free quotes for garden design, turf, paving, retaining walls and backyard renovations.",
+  description: "Brighton landscaping by Greyline Landscaping Brighton. Garden design, turf installation, retaining walls, paving, decking, drainage and backyard makeovers across Brighton and Bayside.",
   icons: {
     icon: [
       { url: "/favicon.ico" },
