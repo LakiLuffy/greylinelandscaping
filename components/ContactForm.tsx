@@ -33,8 +33,8 @@ export function ContactForm({ suburbName, nearbySuburbs }: { suburbName: string;
           <h2 className="text-3xl font-black sm:text-4xl">Ready To Get Your Yard Sorted?</h2>
           <p className="mt-4 text-lg text-white/86">Tell us what needs fixing and we&apos;ll help you take the next step.</p>
           <p className="mt-5 text-white/86">Prefer to talk? Call us directly.</p>
-          <a className="mt-3 inline-flex text-2xl font-black text-white underline underline-offset-4" href="tel:0468107217">
-            0468 107 217
+          <a className="mt-3 inline-flex text-2xl font-black text-white underline underline-offset-4" href="tel:0468247861">
+            0468 247 861
           </a>
           <p className="mt-6 text-sm leading-6 text-white/78">
             Servicing {suburbName}, {nearbySuburbs[0]}, {nearbySuburbs[1]}, and surrounding suburbs.

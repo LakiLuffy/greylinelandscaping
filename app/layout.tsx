@@ -7,10 +7,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://greylinelandscaping.com"),
   title: {
-    default: "Greyline Landscaping Melbourne | Mornington Peninsula & Bayside Landscapers",
-    template: "%s | Greyline Landscaping Melbourne",
+    default: "Greyline Landscaping Brighton | Bayside Landscapers",
+    template: "%s | Greyline Landscaping Brighton",
   },
-  description: "Professional landscaping services across Mornington Peninsula, Bayside and surrounding suburbs. Free quotes for garden design, turf, paving, retaining walls and backyard renovations.",
+  description: "Professional landscaping services across Brighton, Bayside and surrounding suburbs. Free quotes for garden design, turf, paving, retaining walls and backyard renovations.",
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    siteName: "Greyline Landscaping Melbourne",
+    siteName: "Greyline Landscaping Brighton",
     images: [
       {
         url: "/images/hero-gardening-worker.png",
         width: 1672,
         height: 941,
-        alt: "Greyline Landscaping Melbourne gardener planting in a residential backyard",
+        alt: "Greyline Landscaping Brighton gardener planting in a residential backyard",
       },
     ],
     locale: "en_AU",

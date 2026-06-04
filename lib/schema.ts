@@ -15,7 +15,7 @@ export function localBusinessSchema(suburb: Suburb) {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Greyline Landscaping",
+    name: "Greyline Landscaping Brighton",
     description: `Professional landscaping services in ${suburb.name} and the Bayside area`,
     url: pageUrl(suburb),
     telephone: "0468 247 861",
@@ -25,6 +25,7 @@ export function localBusinessSchema(suburb: Suburb) {
     },
     address: {
       "@type": "PostalAddress",
+      streetAddress: "197 Bay St",
       addressLocality: "Brighton",
       addressRegion: "VIC",
       postalCode: "3186",

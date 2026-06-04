@@ -35,7 +35,13 @@ export function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-10 max-w-6xl border-t border-white/14 pt-5 text-sm text-white/58">
-        Copyright {new Date().getFullYear()} Greyline Landscaping. All rights reserved.
+        <p>Copyright {new Date().getFullYear()} Greyline Landscaping. All rights reserved.</p>
+        <p className="mt-3 text-xs leading-5 text-white/45">
+          Greyline Landscaping Brighton, 197 Bay St, Brighton VIC 3186. Phone:{" "}
+          <a className="underline underline-offset-4" href="tel:0468247861">
+            0468 247 861
+          </a>
+        </p>
       </div>
     </footer>
   );

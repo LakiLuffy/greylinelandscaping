@@ -4,18 +4,18 @@ import { FAQSection } from "@/components/FAQSection";
 import { suburbs } from "@/data/suburbs";
 import type { FAQ } from "@/lib/schema";
 
-const phone = "0468 107 217";
-const phoneHref = "tel:0468107217";
+const phone = "0468 247 861";
+const phoneHref = "tel:0468247861";
 
 const portfolioItems = [
   {
     src: "/images/After-10.jpg",
-    alt: "Fresh turf and garden edging by Greyline Landscaping Melbourne",
+    alt: "Fresh turf and garden edging by Greyline Landscaping Brighton",
     caption: "Fresh turf and garden edging",
   },
   {
     src: "/images/WhatsApp-Image-2025-06-27-at-16.49.43_685fd646.jpg",
-    alt: "Finished timber decking and garden upgrade by Greyline Landscaping Melbourne",
+    alt: "Finished timber decking and garden upgrade by Greyline Landscaping Brighton",
     caption: "Finished timber decking",
   },
   {
@@ -81,7 +81,7 @@ const services = [
   },
   {
     title: "Turf Installation",
-    text: "Lawn preparation and turf installation for greener, more usable yards across Peninsula and Bayside homes.",
+    text: "Lawn preparation and turf installation for greener, more usable yards across Brighton and Bayside homes.",
   },
   {
     title: "Retaining Walls",
@@ -106,7 +106,7 @@ const proofCards = ["Fully Insured", "Free Quotes", "Local Team", "Clear Quotes"
 const faqs: FAQ[] = [
   {
     question: "Do you offer free quotes?",
-    answer: `Yes. Call Greyline Landscaping Melbourne on ${phone} or send an enquiry and we will discuss your yard, access, timing and project scope.`,
+    answer: `Yes. Call Greyline Landscaping Brighton on ${phone} or send an enquiry and we will discuss your yard, access, timing and project scope.`,
   },
   {
     question: "Do you show fixed prices online?",
@@ -114,7 +114,7 @@ const faqs: FAQ[] = [
   },
   {
     question: "What areas do you service?",
-    answer: "Greyline Landscaping Melbourne services Mornington Peninsula, Bayside, Mornington, Mt Martha, Mt Eliza, Frankston, Seaford, Brighton, Hampton, Beaumaris and surrounding suburbs.",
+    answer: "Greyline Landscaping Brighton services Bayside, Brighton, Brighton East, Hampton, Beaumaris, Sandringham and surrounding suburbs.",
   },
   {
     question: "What landscaping services do you offer?",
@@ -127,16 +127,16 @@ const faqs: FAQ[] = [
 ];
 
 export const metadata: Metadata = {
-  title: "Greyline Landscaping Melbourne | Mornington Peninsula & Bayside Landscapers",
+  title: "Greyline Landscaping Brighton | Bayside Landscapers",
   description:
-    "Greyline Landscaping Melbourne provides garden makeovers, turf installation, retaining walls, paving, decking, drainage and garden design across Mornington Peninsula and Bayside. Call for a free quote.",
+    "Greyline Landscaping Brighton provides garden makeovers, turf installation, retaining walls, paving, decking, drainage and garden design across Brighton and Bayside. Call for a free quote.",
   alternates: {
     canonical: "https://greylinelandscaping.com",
   },
   openGraph: {
-    title: "Greyline Landscaping Melbourne | Mornington Peninsula & Bayside Landscapers",
+    title: "Greyline Landscaping Brighton | Bayside Landscapers",
     description:
-      "Garden makeovers, turf installation, retaining walls, paving, decking, drainage and garden design across Mornington Peninsula and Bayside.",
+      "Garden makeovers, turf installation, retaining walls, paving, decking, drainage and garden design across Brighton and Bayside.",
     url: "https://greylinelandscaping.com",
     type: "website",
     locale: "en_AU",
@@ -145,15 +145,15 @@ export const metadata: Metadata = {
         url: "/images/hero-gardening-worker.png",
         width: 1672,
         height: 941,
-        alt: "Greyline Landscaping Melbourne gardener planting in a residential backyard",
+        alt: "Greyline Landscaping Brighton gardener planting in a residential backyard",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Greyline Landscaping Melbourne | Mornington Peninsula & Bayside Landscapers",
+    title: "Greyline Landscaping Brighton | Bayside Landscapers",
     description:
-      "Garden makeovers, turf installation, retaining walls, paving, decking, drainage and garden design across Mornington Peninsula and Bayside.",
+      "Garden makeovers, turf installation, retaining walls, paving, decking, drainage and garden design across Brighton and Bayside.",
     images: ["/images/hero-gardening-worker.png"],
   },
 };
@@ -170,7 +170,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/40" />
         <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5">
           <a href="#home" className="flex items-center gap-3">
-            <img className="h-11 w-auto" src="/images/logo-full.png" alt="Greyline Landscaping Melbourne" />
+            <img className="h-11 w-auto" src="/images/logo-full.png" alt="Greyline Landscaping Brighton" />
           </a>
           <nav className="hidden items-center gap-6 text-sm font-bold uppercase tracking-[0.08em] text-white/86 lg:flex" aria-label="Primary navigation">
             <a href="#services">Services</a>
@@ -184,12 +184,12 @@ export default function HomePage() {
           </a>
         </header>
         <div className="relative z-10 mx-auto flex min-h-[calc(78vh-92px)] max-w-5xl flex-col items-center justify-center px-5 pb-16 pt-10 text-center md:min-h-[calc(100vh-92px)]">
-          <p className="text-sm font-black uppercase tracking-[0.18em] text-[#C6BF70]">Mornington Peninsula & Bayside</p>
+          <p className="text-sm font-black uppercase tracking-[0.18em] text-[#C6BF70]">Brighton & Bayside</p>
           <h1 className="mt-5 max-w-4xl text-5xl font-black leading-[0.95] sm:text-6xl lg:text-7xl">
             YOUR YARD CALLED.
             <span className="block">IT WANTS ITS WEEKENDS BACK.</span>
           </h1>
-          <p className="mt-5 text-xl font-bold text-white sm:text-2xl">Peninsula & Bayside Landscaping That Actually Gets Done</p>
+          <p className="mt-5 text-xl font-bold text-white sm:text-2xl">Brighton & Bayside Landscaping That Actually Gets Done</p>
           <p className="mt-5 max-w-3xl text-base leading-7 text-white/88 sm:text-lg">
             Patchy lawn, tired garden beds, drainage issues or an outdoor space you never use? Greyline turns it into a cleaner, greener yard - with clear quotes, updates while we work and a clean finish when we leave.
           </p>
@@ -214,10 +214,10 @@ export default function HomePage() {
       <section className="bg-[#5B6334] px-5 py-16 text-white">
         <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1fr_0.42fr] md:items-end">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-[#C6BF70]">Greyline Landscaping Melbourne</p>
+            <p className="text-sm font-black uppercase tracking-[0.16em] text-[#C6BF70]">Greyline Landscaping Brighton</p>
             <h2 className="mt-3 text-3xl font-black sm:text-4xl">We Turn Tired Yards Into Clean, Usable Outdoor Spaces</h2>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-white/88">
-              Greyline Landscaping Melbourne helps homeowners across Mornington Peninsula and Bayside transform patchy lawns, tired garden beds, drainage problems and unfinished outdoor areas into cleaner, greener spaces that are easier to enjoy.
+              Greyline Landscaping Brighton helps homeowners across Brighton and Bayside transform patchy lawns, tired garden beds, drainage problems and unfinished outdoor areas into cleaner, greener spaces that are easier to enjoy.
             </p>
             <p className="mt-4 max-w-3xl text-lg leading-8 text-white/88">
               From garden makeovers and turf installation to retaining walls, paving, decking, drainage and complete garden design and construction, we keep the process clear from quote to clean finish.
@@ -248,7 +248,7 @@ export default function HomePage() {
 
       <section className="bg-[#EEF2EA] px-5 py-10">
         <div className="mx-auto flex max-w-6xl flex-col gap-5 md:flex-row md:items-center md:justify-between">
-          <p className="max-w-2xl text-lg font-bold text-[#2B2B2B]">Greyline Landscaping Melbourne is a local landscaping team for Mornington Peninsula and Bayside homeowners.</p>
+          <p className="max-w-2xl text-lg font-bold text-[#2B2B2B]">Greyline Landscaping Brighton is a local landscaping team for Brighton and Bayside homeowners.</p>
           <div className="flex flex-wrap gap-3">
             {trustSignals.map((signal) => (
               <span className="rounded-[4px] bg-white px-4 py-3 text-sm font-black uppercase tracking-[0.08em] text-[#3F5637]" key={signal}>
@@ -283,9 +283,9 @@ export default function HomePage() {
       <section className="bg-[#EEF2EA] px-5 py-16" id="services">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-black text-[#2B2B2B] sm:text-4xl">Landscaping Services Across Mornington Peninsula & Bayside</h2>
+            <h2 className="text-3xl font-black text-[#2B2B2B] sm:text-4xl">Landscaping Services Across Brighton & Bayside</h2>
             <p className="mt-4 text-lg leading-8 text-[#555]">
-              From small upgrades to full outdoor transformations, Greyline Landscaping Melbourne helps homeowners create cleaner, more functional yards with clear quoting and a professional finish.
+              From small upgrades to full outdoor transformations, Greyline Landscaping Brighton helps homeowners create cleaner, more functional yards with clear quoting and a professional finish.
             </p>
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -326,7 +326,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl">
           <h2 className="text-3xl font-black sm:text-4xl">Follow Our Work</h2>
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
-            <img className="h-64 w-full object-cover" src="/images/greyline-instagram-work.png" alt="Recent Greyline Landscaping Melbourne work collage" loading="lazy" />
+            <img className="h-64 w-full object-cover" src="/images/greyline-instagram-work.png" alt="Recent Greyline Landscaping Brighton work collage" loading="lazy" />
             <img className="h-64 w-full object-cover" src="/images/After-10.jpg" alt="Completed turf and garden edging project" loading="lazy" />
             <img className="h-64 w-full object-cover" src="/images/WhatsApp-Image-2025-06-27-at-16.49.43_685fd646.jpg" alt="Completed outdoor decking work by Greyline" loading="lazy" />
           </div>
@@ -343,13 +343,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ContactForm suburbName="Mornington Peninsula & Bayside" nearbySuburbs={["Mornington", "Mt Martha", "Mt Eliza", "Frankston"]} />
+      <ContactForm suburbName="Brighton & Bayside" nearbySuburbs={["Brighton East", "Hampton", "Beaumaris", "Sandringham"]} />
 
       <section className="bg-white px-5 py-16">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-3xl font-black text-[#2B2B2B] sm:text-4xl">Landscaping Across Mornington Peninsula & Bayside</h2>
+          <h2 className="text-3xl font-black text-[#2B2B2B] sm:text-4xl">Landscaping Across Brighton & Bayside</h2>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-[#555]">
-            Greyline Landscaping Melbourne works with homeowners across Mornington Peninsula, Bayside and surrounding suburbs, helping transform tired lawns, unfinished gardens and underused outdoor areas into cleaner, more functional spaces.
+            Greyline Landscaping Brighton works with homeowners across Brighton, Bayside and surrounding suburbs, helping transform tired lawns, unfinished gardens and underused outdoor areas into cleaner, more functional spaces.
           </p>
           <a className="mt-6 inline-flex rounded-[4px] bg-[#1F6B3A] px-6 py-4 font-black uppercase text-white transition hover:bg-[#18542e]" href={phoneHref}>
             Call {phone} for a free local landscaping quote
@@ -364,12 +364,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <FAQSection suburbName="Mornington Peninsula & Bayside" faqs={faqs} />
+      <FAQSection suburbName="Brighton & Bayside" faqs={faqs} />
 
       <section className="bg-[#3F5637] px-5 py-14 text-center text-white">
         <p className="text-sm font-black uppercase tracking-[0.16em] text-[#C6BF70]">FREE QUOTE</p>
         <h2 className="mt-3 text-3xl font-black sm:text-4xl">Get your yard sorted.</h2>
-        <p className="mt-3 text-lg text-white/84">Mornington Peninsula & Bayside landscaping that actually gets done.</p>
+        <p className="mt-3 text-lg text-white/84">Brighton & Bayside landscaping that actually gets done.</p>
         <a className="mt-6 inline-flex rounded-[4px] bg-[#9D5324] px-7 py-4 text-xl font-black text-white transition hover:bg-[#85461f]" href={phoneHref}>
           {phone}
         </a>
