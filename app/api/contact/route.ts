@@ -44,7 +44,7 @@ export async function POST(request: Request) {
 
   if (!resendApiKey) {
     console.error("Missing RESEND_API_KEY. Greyline Landscaping contact enquiry was not emailed.", enquiry);
-    return NextResponse.json({ error: "Email delivery is not configured." }, { status: 500 });
+    return NextResponse.json({ error: "Email is not configured yet. Add RESEND_API_KEY in Vercel, then redeploy." }, { status: 500 });
   }
 
   const submittedAt = new Date().toLocaleString("en-AU", {
@@ -99,7 +99,7 @@ export async function POST(request: Request) {
   if (!emailResponse.ok) {
     const errorText = await emailResponse.text();
     console.error("Failed to email Greyline Landscaping contact enquiry", errorText);
-    return NextResponse.json({ error: "Email delivery failed." }, { status: 502 });
+    return NextResponse.json({ error: "Email delivery failed. Check your Resend sender/domain setup." }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true });

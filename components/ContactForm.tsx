@@ -24,11 +24,13 @@ function QuoteForm({ suburbName, variant = "section" }: Pick<ContactFormProps, "
       headers: { "Content-Type": "application/json" },
     });
 
+    const result = await response.json().catch(() => null);
+
     if (response.ok) {
       setStatus("Thanks. Your quote request has been received.");
       form.reset();
     } else {
-      setStatus("Sorry, the form could not be sent. Please call 0468 247 861.");
+      setStatus(result?.error || "Sorry, the form could not be sent. Please call 0468 247 861.");
     }
   }
 
