@@ -161,7 +161,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main>
-      <section className="relative min-h-[78vh] overflow-hidden bg-[#1f1f1f] text-white md:min-h-screen" id="home">
+      <section className="relative overflow-hidden bg-[#1f1f1f] text-white" id="home">
         <img
           className="absolute inset-0 h-full w-full object-cover"
           src="/images/hero-gardening-worker.png"
@@ -183,25 +183,25 @@ export default function HomePage() {
             Call {phone}
           </a>
         </header>
-        <div className="relative z-10 mx-auto flex min-h-[calc(78vh-92px)] max-w-5xl flex-col items-center justify-center px-5 pb-16 pt-10 text-center md:min-h-[calc(100vh-92px)]">
+        <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-5 pb-12 pt-8 text-center md:min-h-[calc(100vh-92px)]">
           <p className="text-sm font-black uppercase tracking-[0.18em] text-[#C6BF70]">Brighton & Bayside</p>
-          <h1 className="mt-5 max-w-4xl text-5xl font-black leading-[0.95] sm:text-6xl lg:text-7xl">
+          <h1 className="mt-4 max-w-4xl text-4xl font-black leading-[0.98] sm:text-5xl lg:text-6xl">
             YOUR YARD CALLED.
             <span className="block">IT WANTS ITS WEEKENDS BACK.</span>
           </h1>
-          <p className="mt-5 text-xl font-bold text-white sm:text-2xl">Brighton & Bayside Landscaping That Actually Gets Done</p>
-          <p className="mt-5 max-w-3xl text-base leading-7 text-white/88 sm:text-lg">
+          <p className="mt-4 text-lg font-bold text-white sm:text-xl">Brighton & Bayside Landscaping That Actually Gets Done</p>
+          <p className="mt-4 max-w-3xl text-base leading-7 text-white/88">
             Patchy lawn, tired garden beds, drainage issues or an outdoor space you never use? Greyline turns it into a cleaner, greener yard - with clear quotes, updates while we work and a clean finish when we leave.
           </p>
-          <div className="mt-8 flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:justify-center">
+          <div className="mt-6 flex w-full max-w-xl flex-col gap-3 sm:flex-row sm:justify-center">
             <a className="rounded-[4px] bg-[#9D5324] px-6 py-4 text-center font-black uppercase text-white transition hover:bg-[#85461f]" href={phoneHref}>
               Call {phone}
             </a>
-            <a className="rounded-[4px] bg-[#1F6B3A] px-6 py-4 text-center font-black uppercase text-white transition hover:bg-[#18542e]" href="#contact-form">
-              Get a Free Quote
-            </a>
           </div>
-          <div className="mt-9 flex flex-wrap justify-center gap-3 text-sm font-bold uppercase tracking-[0.08em] text-white/90">
+          <div className="mt-7 w-full max-w-3xl">
+            <ContactForm suburbName="Brighton & Bayside" nearbySuburbs={["Brighton East", "Hampton", "Beaumaris", "Sandringham"]} variant="hero" />
+          </div>
+          <div className="mt-7 flex flex-wrap justify-center gap-3 text-sm font-bold uppercase tracking-[0.08em] text-white/90">
             {trustSignals.map((signal) => (
               <span className="border border-white/35 px-3 py-2" key={signal}>
                 {signal}
@@ -342,8 +342,6 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-
-      <ContactForm suburbName="Brighton & Bayside" nearbySuburbs={["Brighton East", "Hampton", "Beaumaris", "Sandringham"]} />
 
       <section className="bg-white px-5 py-16">
         <div className="mx-auto max-w-6xl">
