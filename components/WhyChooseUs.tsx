@@ -4,7 +4,7 @@ const features = [
   { title: "Free No-Obligation Quotes", icon: ClipboardCheck, text: "Clear scope and pricing before work begins, with no pressure to proceed." },
   { title: "Experienced Local Team", icon: BadgeCheck, text: "Local landscaping knowledge for Bayside homes, townhouses and family blocks." },
   { title: "Clean, Tidy Workmanship", icon: Sparkles, text: "We keep the site organised during the job and leave a clean finish behind." },
-  { title: "Fully Licensed & Insured", icon: ShieldCheck, text: "Professional, insured work for residential landscaping projects." },
+  { title: "Fully Insured", icon: ShieldCheck, text: "Professional, insured work for residential landscaping projects." },
 ];
 
 export function WhyChooseUs({ suburbName }: { suburbName: string }) {

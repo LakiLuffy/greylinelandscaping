@@ -24,7 +24,7 @@ export function Footer() {
               <ul className="mt-4 space-y-2 text-sm text-white/78">
                 {suburbs.map((suburb) => (
                   <li key={suburb.slug}>
-                    <Link className="hover:text-white" href={`/landscaper-${suburb.slug}`}>
+                    <Link className="hover:text-white" href={`/landscaper-${suburb.slug}/`}>
                       {suburb.name}
                     </Link>
                   </li>

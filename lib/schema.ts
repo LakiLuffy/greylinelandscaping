@@ -8,7 +8,7 @@ export type FAQ = {
 };
 
 export function pageUrl(suburb: Suburb) {
-  return `${domain}/landscaper-${suburb.slug}`;
+  return `${domain}/landscaper-${suburb.slug}/`;
 }
 
 export function localBusinessSchema(suburb: Suburb) {

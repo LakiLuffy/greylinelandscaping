@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
 import { FAQSection } from "@/components/FAQSection";
+import { SiteHeader } from "@/components/SiteHeader";
+import { phone, phoneHref, servicePages, serviceUrl, trustSignals } from "@/data/services";
 import { suburbs } from "@/data/suburbs";
 import type { FAQ } from "@/lib/schema";
-
-const phone = "0468 247 861";
-const phoneHref = "tel:0468247861";
 
 const portfolioItems = [
   {
@@ -40,8 +39,6 @@ const portfolioItems = [
   },
 ];
 
-const trustSignals = ["5-Star Rated", "Fully Insured", "Free Quotes", "Local Team"];
-
 const processPanels = [
   {
     title: "CONSULT",
@@ -63,41 +60,6 @@ const processPanels = [
     button: "Get a Quote",
     href: "#contact-form",
     image: "/images/multi-tier-concrete-sleeper-terracing.png",
-  },
-];
-
-const services = [
-  {
-    title: "Garden Makeovers",
-    text: "Turn tired garden beds, patchy lawns and messy outdoor corners into a cleaner yard that feels easier to use.",
-  },
-  {
-    title: "Garden Design",
-    text: "A practical plan for planting, access, lawn, drainage and outdoor zones before the work begins.",
-  },
-  {
-    title: "Garden Design & Construction",
-    text: "From layout through to the build, we create outdoor spaces with clear scope and a clean finish.",
-  },
-  {
-    title: "Turf Installation",
-    text: "Lawn preparation and turf installation for greener, more usable yards across Brighton and Bayside homes.",
-  },
-  {
-    title: "Retaining Walls",
-    text: "Retaining solutions for level changes, garden structure and outdoor areas that need better support.",
-  },
-  {
-    title: "Paving",
-    text: "Paths and paved areas that reduce mud, improve access and connect the garden back to the home.",
-  },
-  {
-    title: "Decking",
-    text: "Decking for outdoor living zones, entrances and usable spaces that need a stronger connection to the yard.",
-  },
-  {
-    title: "Drainage Solutions",
-    text: "Drainage improvements for wet, muddy or slow-draining areas that stop the yard working properly.",
   },
 ];
 
@@ -168,21 +130,7 @@ export default function HomePage() {
           alt="Professional landscaper planting shrubs in a residential backyard"
         />
         <div className="absolute inset-0 bg-black/40" />
-        <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-5">
-          <a href="#home" className="flex items-center gap-3">
-            <img className="h-11 w-auto" src="/images/logo-full.png" alt="Greyline Landscaping Brighton" />
-          </a>
-          <nav className="hidden items-center gap-6 text-sm font-bold uppercase tracking-[0.08em] text-white/86 lg:flex" aria-label="Primary navigation">
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#process">Process</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#contact-form">Contact</a>
-          </nav>
-          <a className="rounded-[4px] bg-[#9D5324] px-4 py-3 text-sm font-black uppercase text-white transition hover:bg-[#85461f]" href={phoneHref}>
-            Call {phone}
-          </a>
-        </header>
+        <SiteHeader variant="dark" />
         <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-5 pb-12 pt-8 text-center md:min-h-[calc(100vh-92px)]">
           <p className="text-sm font-black uppercase tracking-[0.18em] text-[#C6BF70]">Brighton & Bayside</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-black leading-[0.98] sm:text-5xl lg:text-6xl">
@@ -289,12 +237,12 @@ export default function HomePage() {
             </p>
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
+            {servicePages.map((service) => (
               <article className="bg-white p-6 transition hover:-translate-y-1" key={service.title}>
                 <h3 className="text-xl font-black text-[#2B2B2B]">{service.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-[#606060]">{service.text}</p>
-                <a className="mt-5 inline-flex text-sm font-black uppercase text-[#1F6B3A]" href={phoneHref}>
-                  Call for a quote
+                <p className="mt-3 text-sm leading-6 text-[#606060]">{service.heroText}</p>
+                <a className="mt-5 inline-flex text-sm font-black uppercase text-[#1F6B3A]" href={serviceUrl(service.slug)}>
+                  View service
                 </a>
               </article>
             ))}
@@ -354,7 +302,7 @@ export default function HomePage() {
           </a>
           <div className="mt-8 flex flex-wrap gap-2">
             {suburbs.slice(0, 12).map((suburb) => (
-              <a className="rounded-[4px] bg-[#EEF2EA] px-3 py-2 text-sm font-bold text-[#3F5637]" href={`/landscaper-${suburb.slug}`} key={suburb.slug}>
+              <a className="rounded-[4px] bg-[#EEF2EA] px-3 py-2 text-sm font-bold text-[#3F5637]" href={`/landscaper-${suburb.slug}/`} key={suburb.slug}>
                 {suburb.name}
               </a>
             ))}

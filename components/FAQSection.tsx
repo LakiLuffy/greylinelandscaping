@@ -1,10 +1,10 @@
 import type { FAQ } from "@/lib/schema";
 
-export function FAQSection({ suburbName, faqs }: { suburbName: string; faqs: FAQ[] }) {
+export function FAQSection({ suburbName, faqs, title }: { suburbName: string; faqs: FAQ[]; title?: string }) {
   return (
     <section className="bg-[#f4f7f1] px-5 py-16">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-center text-3xl font-black text-[#2D2D2D] sm:text-4xl">Frequently Asked Questions - Landscaping in {suburbName}</h2>
+        <h2 className="text-center text-3xl font-black text-[#2D2D2D] sm:text-4xl">{title || `Frequently Asked Questions - Landscaping in ${suburbName}`}</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {faqs.map((faq) => (
             <article className="rounded-lg border border-[#dce5d7] bg-white p-6" key={faq.question}>

@@ -12,16 +12,18 @@ export type Suburb = {
 };
 
 export const allServices = [
-  "Garden Design & Planting",
+  "Garden Makeovers",
+  "Garden Design",
+  "Garden Design & Construction",
   "Turf Installation",
   "Retaining Walls",
-  "Paving & Pathways",
+  "Paving",
   "Decking",
-  "Garden Bed Installation & Mulching",
-  "Hedge & Tree Planting",
-  "Full Backyard Renovations",
-  "Garden Maintenance",
   "Drainage Solutions",
+  "Planting",
+  "Mulching",
+  "Edging",
+  "Clean Project Finishing",
 ] as const;
 
 export const suburbs: Suburb[] = [
@@ -322,7 +324,7 @@ export function getSuburbByName(name: string) {
 
 export function getSuburbHref(name: string) {
   const suburb = getSuburbByName(name);
-  return suburb ? `/landscaper-${suburb.slug}` : "#";
+  return suburb ? `/landscaper-${suburb.slug}/` : "#";
 }
 
 export const suburbsByPriority = suburbs.reduce<Record<Suburb["priority"], Suburb[]>>(
