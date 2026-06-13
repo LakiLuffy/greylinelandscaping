@@ -1,6 +1,6 @@
 import type { Suburb } from "@/data/suburbs";
 
-const domain = "https://greylinelandscaping.com";
+export const domain = "https://greylinelandscaping.com";
 
 export type FAQ = {
   question: string;
@@ -8,36 +8,84 @@ export type FAQ = {
 };
 
 export function pageUrl(suburb: Suburb) {
-  return `${domain}/landscaper-${suburb.slug}/`;
+  return `${domain}/landscaping-${suburb.slug}/`;
 }
 
-export function localBusinessSchema(suburb: Suburb) {
+export function serviceAreasUrl() {
+  return `${domain}/service-areas/`;
+}
+
+export function serviceSchema(suburb: Suburb) {
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Greyline Landscaping Brighton",
-    description: `Professional landscaping services in ${suburb.name} and the Bayside area`,
+    "@type": "Service",
+    serviceType: "Landscaping",
+    name: `Landscaping ${suburb.name}`,
+    description: suburb.metaDescription,
     url: pageUrl(suburb),
-    telephone: "0468 247 861",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Greyline Landscaping Brighton",
+      url: domain,
+      telephone: "0468 107 217",
+    },
     areaServed: {
       "@type": "City",
       name: `${suburb.name}, VIC`,
-    },
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "197 Bay St",
-      addressLocality: "Brighton",
       addressRegion: "VIC",
-      postalCode: "3186",
       addressCountry: "AU",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: "-37.9075",
-      longitude: "144.9868",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `Landscaping services in ${suburb.name}`,
+      itemListElement: [
+        "Landscaping",
+        "Landscape design",
+        "Garden design",
+        "Garden maintenance",
+        "Lawn care",
+        "Turf installation",
+        "Turf laying",
+        "Paving",
+        "Retaining walls",
+        "Planting",
+        "Garden clean-ups",
+        "Outdoor space upgrades",
+      ].map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: `${service} ${suburb.name}`,
+        },
+      })),
     },
-    openingHours: "Mo-Fr 07:00-17:00, Sa 08:00-14:00",
-    priceRange: "$$",
+  };
+}
+
+export function breadcrumbSchema(suburb: Suburb) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${domain}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Service Areas",
+        item: serviceAreasUrl(),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: `Landscaping ${suburb.name}`,
+        item: pageUrl(suburb),
+      },
+    ],
   };
 }
 
@@ -54,29 +102,4 @@ export function faqSchema(faqs: FAQ[]) {
       },
     })),
   };
-}
-
-export function suburbFaqs(suburb: Suburb): FAQ[] {
-  return [
-    {
-      question: `How much does landscaping cost in ${suburb.name}?`,
-      answer: `Landscaping costs in ${suburb.name} depend on the size of the yard, access, materials, drainage and the amount of construction required. Greyline Landscaping provides free quotes so you can understand the scope before work begins.`,
-    },
-    {
-      question: `Do you offer free quotes in ${suburb.name}?`,
-      answer: `Yes, we offer free no-obligation landscaping quotes in ${suburb.name}. Call Greyline Landscaping on 0468 247 861 or send an enquiry and we will discuss your property, goals and timing.`,
-    },
-    {
-      question: `What landscaping services do you offer in ${suburb.name}?`,
-      answer: `In ${suburb.name}, we offer garden design, planting, turf installation, retaining walls, paving, decking, garden beds, mulching, hedge planting, backyard renovations, maintenance and drainage solutions. Your quote is matched to the condition and layout of your ${suburb.name} property.`,
-    },
-    {
-      question: `How long does a typical landscaping project in ${suburb.name} take?`,
-      answer: `Smaller ${suburb.name} landscaping jobs can often be completed in a few days, while full backyard renovations may take one to three weeks depending on weather, materials and access. We outline timing clearly before starting the project.`,
-    },
-    {
-      question: `Do you build retaining walls in ${suburb.name}?`,
-      answer: `Yes, we build retaining walls in ${suburb.name}, including timber, concrete sleeper and stone options where suitable. Retaining wall recommendations depend on site levels, drainage needs and the finish you want for your garden.`,
-    },
-  ];
 }

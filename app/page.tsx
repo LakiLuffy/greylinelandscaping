@@ -291,19 +291,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-[#EEF2EA] px-5 py-12">
+        <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.16em] text-[#4A7C59]">Landscaping ideas for Brighton homes</p>
+            <h2 className="mt-2 text-2xl font-black text-[#2B2B2B]">Planning a new outdoor space?</h2>
+            <p className="mt-3 max-w-3xl leading-7 text-[#555]">Read our guide to the best landscaping ideas for Brighton and Bayside homes.</p>
+          </div>
+          <a className="rounded-[4px] bg-[#1F6B3A] px-5 py-3 text-center text-sm font-black uppercase text-white transition hover:bg-[#18542e]" href="/blog/best-landscaping-ideas-brighton/">
+            Read the guide
+          </a>
+        </div>
+      </section>
+
       <section className="bg-white px-5 py-16">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-3xl font-black text-[#2B2B2B] sm:text-4xl">Landscaping Across Brighton & Bayside</h2>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-[#555]">
             Greyline Landscaping Brighton works with homeowners across Brighton, Bayside and surrounding suburbs, helping transform tired lawns, unfinished gardens and underused outdoor areas into cleaner, more functional spaces.
           </p>
-          <a className="mt-6 inline-flex rounded-[4px] bg-[#1F6B3A] px-6 py-4 font-black uppercase text-white transition hover:bg-[#18542e]" href={phoneHref}>
-            Call {phone} for a free local landscaping quote
+          <a className="mt-6 inline-flex rounded-[4px] bg-[#1F6B3A] px-6 py-4 font-black uppercase text-white transition hover:bg-[#18542e]" href="/service-areas/">
+            View landscaping service areas
           </a>
           <div className="mt-8 flex flex-wrap gap-2">
-            {suburbs.slice(0, 12).map((suburb) => (
-              <a className="rounded-[4px] bg-[#EEF2EA] px-3 py-2 text-sm font-bold text-[#3F5637]" href={`/landscaper-${suburb.slug}/`} key={suburb.slug}>
-                {suburb.name}
+            {suburbs.map((suburb) => (
+              <a className="rounded-[4px] bg-[#EEF2EA] px-3 py-2 text-sm font-bold text-[#3F5637]" href={`/landscaping-${suburb.slug}/`} key={suburb.slug}>
+                Landscaping {suburb.name}
               </a>
             ))}
           </div>

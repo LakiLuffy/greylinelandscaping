@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { phone, phoneHref } from "@/data/services";
 import { suburbsByPriority } from "@/data/suburbs";
 
 export function Footer() {
@@ -10,10 +11,13 @@ export function Footer() {
             Greyline Landscaping
           </Link>
           <p className="mt-3 text-sm leading-6 text-white/72">Professional landscaping across Brighton, Bayside and surrounding suburbs.</p>
+          <Link className="mt-4 inline-flex text-sm font-black uppercase text-[#c9d7bf] underline underline-offset-4" href="/service-areas/">
+            View service areas
+          </Link>
           <p className="mt-4 text-sm">
             Phone:{" "}
-            <a className="font-bold underline underline-offset-4" href="tel:0468247861">
-              0468 247 861
+            <a className="font-bold underline underline-offset-4" href={phoneHref}>
+              {phone}
             </a>
           </p>
         </div>
@@ -24,8 +28,8 @@ export function Footer() {
               <ul className="mt-4 space-y-2 text-sm text-white/78">
                 {suburbs.map((suburb) => (
                   <li key={suburb.slug}>
-                    <Link className="hover:text-white" href={`/landscaper-${suburb.slug}/`}>
-                      {suburb.name}
+                    <Link className="hover:text-white" href={`/landscaping-${suburb.slug}/`}>
+                      Landscaping {suburb.name}
                     </Link>
                   </li>
                 ))}
@@ -38,8 +42,8 @@ export function Footer() {
         <p>Copyright {new Date().getFullYear()} Greyline Landscaping. All rights reserved.</p>
         <p className="mt-3 text-xs leading-5 text-white/45">
           Greyline Landscaping Brighton, 197 Bay St, Brighton VIC 3186. Phone:{" "}
-          <a className="underline underline-offset-4" href="tel:0468247861">
-            0468 247 861
+          <a className="underline underline-offset-4" href={phoneHref}>
+            {phone}
           </a>
         </p>
       </div>

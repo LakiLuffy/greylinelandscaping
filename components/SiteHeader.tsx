@@ -14,6 +14,8 @@ export function SiteHeader({ variant = "dark" }: { variant?: "dark" | "light" })
         </Link>
         <nav className={`hidden items-center gap-6 text-sm font-bold uppercase tracking-[0.08em] lg:flex ${navClassName}`} aria-label="Primary navigation">
           <Link href="/services/">Services</Link>
+          <Link href="/service-areas/">Service Areas</Link>
+          <Link href="/blog/">Blog</Link>
           <Link href="/#portfolio">Portfolio</Link>
           <Link href="/#process">Process</Link>
           <Link href="/#reviews">Reviews</Link>
@@ -22,9 +24,15 @@ export function SiteHeader({ variant = "dark" }: { variant?: "dark" | "light" })
         <a className="rounded-[4px] bg-[#9D5324] px-4 py-3 text-sm font-black uppercase text-white transition hover:bg-[#85461f]" href={phoneHref}>
           Call {phone}
         </a>
-        <nav className={`grid w-full grid-cols-3 gap-2 text-center text-xs font-black uppercase tracking-[0.06em] sm:grid-cols-5 lg:hidden ${navClassName}`} aria-label="Mobile navigation">
+        <nav className={`grid w-full grid-cols-3 gap-2 text-center text-xs font-black uppercase tracking-[0.06em] sm:grid-cols-6 lg:hidden ${navClassName}`} aria-label="Mobile navigation">
           <Link className="rounded-[4px] border border-current/25 px-2 py-2" href="/services/">
             Services
+          </Link>
+          <Link className="rounded-[4px] border border-current/25 px-2 py-2" href="/service-areas/">
+            Areas
+          </Link>
+          <Link className="rounded-[4px] border border-current/25 px-2 py-2" href="/blog/">
+            Blog
           </Link>
           <Link className="rounded-[4px] border border-current/25 px-2 py-2" href="/#portfolio">
             Portfolio
@@ -34,9 +42,6 @@ export function SiteHeader({ variant = "dark" }: { variant?: "dark" | "light" })
           </Link>
           <Link className="rounded-[4px] border border-current/25 px-2 py-2" href="/#reviews">
             Reviews
-          </Link>
-          <Link className="rounded-[4px] border border-current/25 px-2 py-2" href="#contact-form">
-            Contact
           </Link>
         </nav>
       </div>
